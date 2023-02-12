@@ -19,7 +19,6 @@ import PokemonModal from "./Pokemon";
 
 
 
-
 type typeListPokemon = {
     name: string;
     url: string;

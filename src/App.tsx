@@ -3,14 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import HomePage from './pages/home';
+import MiLayout from './pages/layout';
+
+
 
 
 function App() {
   // 2. Wrap ChakraProvider at the root of your app
   return (
-    <ChakraProvider>
-      <HomePage />
-    </ChakraProvider>
+      <MiLayout />
   )
 }
 

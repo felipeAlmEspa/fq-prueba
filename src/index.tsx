@@ -4,12 +4,50 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ErrorPage from './pages/error/PageNoFound';
+import HomePage from './pages/home';
+import { ChakraProvider } from '@chakra-ui/react';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const queryClient = new QueryClient();
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        path: "home",
+        element: <HomePage />,
+      },
+    ],
+
+  },
+ 
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+    <ChakraProvider>
+    <RouterProvider router={router} />
+    </ChakraProvider>
+      
+    </QueryClientProvider>
+
   </React.StrictMode>
 );
 
