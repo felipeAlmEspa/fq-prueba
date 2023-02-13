@@ -53,12 +53,7 @@ const PokemonPage = () => {
         return (
             <>
                 <Box padding={'10px'} >
-                    <Grid templateColumns='repeat(2, 1fr)' gap={6}>
-                        <GridItem w='100%' h='10' >
-                            <Input placeholder='Ingresar termino' onChange={v=>onChangeTerminoBusq(v.target.value)} />
-                        </GridItem>
-                    </Grid>
-
+                            <Input placeholder='Ingresar termino de busqueda' onChange={v=>onChangeTerminoBusq(v.target.value)} />
 
                 </Box>
                 <TableContainer >

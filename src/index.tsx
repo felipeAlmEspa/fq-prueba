@@ -25,9 +25,9 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
-    
-    path: "/",
-    element: <App/>,
+
+    path: "*",
+    element: <App />,
     children: [
       {
         index: true,
@@ -39,19 +39,19 @@ const router = createBrowserRouter([
         element: <PokemonPage />,
       },
     ],
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
 
   },
- 
+
 ]);
 
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-    <ChakraProvider>
-    <RouterProvider router={router} />
-    </ChakraProvider>
-      
+      <ChakraProvider>
+        <RouterProvider router={router} />
+      </ChakraProvider>
+
     </QueryClientProvider>
 
   </React.StrictMode>
