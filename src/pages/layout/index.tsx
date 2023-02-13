@@ -12,7 +12,6 @@ const MiLayout = () =>{
         <MiHeader/>
         <MiContent/>
         <Mifooter/>
-        
         </Box>
     )
 }

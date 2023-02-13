@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import {
   QueryClient,
   QueryClientProvider,
@@ -26,11 +25,12 @@ const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
+    
     path: "/",
     element: <App/>,
-    errorElement: <ErrorPage/>,
     children: [
       {
+        index: true,
         path: "home",
         element: <HomePage />,
       },
@@ -39,6 +39,7 @@ const router = createBrowserRouter([
         element: <PokemonPage />,
       },
     ],
+    errorElement: <ErrorPage/>,
 
   },
  
