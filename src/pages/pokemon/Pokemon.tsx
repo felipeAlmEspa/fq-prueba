@@ -38,16 +38,11 @@ import { getNamePokemon } from '../../services/pokemon/PokemonServices';
 function PokemonModal({ pokemonNome = '' }) {
     const [pokemon, setPokemon] = useState<Pokemon>();
     const { isOpen, onOpen, onClose } = useDisclosure();
-
-    useEffect(() => {
-        miConstructor();
-    }, []);
-
-    async function miConstructor() {
+    
+    async function buscarPokemon(){
         const poke = await getNamePokemon(pokemonNome);
         setPokemon(poke);
     }
-
 
     const HabilidadesTabla = () => {
 
@@ -98,7 +93,7 @@ function PokemonModal({ pokemonNome = '' }) {
                             <Text>{pokemon.height} cm.</Text>
                         </GridItem>
                     </Grid>
-                    <Grid templateColumns='repeat(3, 1fr)' gap={6} paddingTop={'5'}>
+                    <Grid templateColumns='repeat(3, 1fr)' gap={6} paddingTop={'10'}>
                         <GridItem w='100%' h='10'>
                             <Tag>Tipo</Tag>
                             {pokemon.types.map(item=>{
@@ -117,7 +112,7 @@ function PokemonModal({ pokemonNome = '' }) {
 
     return (
         <>
-            <Button onClick={onOpen}>Ver detalles</Button>
+            <Button onClick={()=> {onOpen();buscarPokemon()}}>Ver detalles</Button>
 
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />

@@ -1,8 +1,11 @@
+import { Box } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 
 const MiContent = () =>{
     return(
-        <Outlet />
+        <Box width={'100%'} >
+            <Outlet />
+        </Box>
     )
 
 }

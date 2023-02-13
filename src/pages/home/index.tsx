@@ -1,15 +1,17 @@
-import PokemonPage from "../pokemon";
-
+import { Box, Heading } from "@chakra-ui/react";
 
 const HomePage = () => {
 
 
     return (
-        <div style={{padding: '10px', width: '100%'}}>
-            <h1>HomePage</h1>
-            <PokemonPage/>
-
-        </div>
+        <Box style={{ padding: '10px', width: '100%' }}>
+            <Heading as='h2' size='2xl'>
+                Prueba tecnica desarrollador Frontend
+            </Heading>
+            <Heading as='h4' size='md' paddingTop={'40px'}>
+               TOMAS FELIPE QUICHIMBO PERALTA
+            </Heading>
+        </Box>
 
     )
 }

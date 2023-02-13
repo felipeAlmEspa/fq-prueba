@@ -23,6 +23,8 @@ export async function getIdPokemon(id: number): Promise<Pokemon> {
     return  await axios.get<Pokemon>(api + modulo+id).then(response => { return response.data })
 }
 
+
+
 // export const useGetEmployees = (filters: any) => {
 //     // Notice we only use `employees` as query key, because we want to preserve our cache
 //     return useQuery(

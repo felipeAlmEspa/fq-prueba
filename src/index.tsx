@@ -16,6 +16,7 @@ import {
 import ErrorPage from './pages/error/PageNoFound';
 import HomePage from './pages/home';
 import { ChakraProvider } from '@chakra-ui/react';
+import PokemonPage from './pages/pokemon';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <HomePage />,
+      },
+      {
+        path: "pokemon",
+        element: <PokemonPage />,
       },
     ],
 

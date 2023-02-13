@@ -2,13 +2,13 @@ export const Menu =[
     {
         id: 1,
         titulo: 'Home',
-        url:'/home',
+        url:'home',
         label: 'Home'
     },
     {
         id: 2,
         titulo: 'Pokemon',
-        url:'/pokemon',
+        url:'pokemon',
         label: 'pokemon'
     }
 ]

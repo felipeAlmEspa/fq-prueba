@@ -39,7 +39,7 @@ function MiDrawer() {
               <UnorderedList >
                 {Menu.map(item => {
                   return <ListItem key={item.id} >
-                      <Link  href="home">{item.label}</Link>
+                      <Link  href={item.url}>{item.label}</Link>
                   </ListItem>
                 })}
               </UnorderedList>
